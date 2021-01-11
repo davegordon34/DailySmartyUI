@@ -1,10 +1,11 @@
 import {
-    SET_RECENT_POSTS
+    SET_RECENT_POSTS,
+    SET_RESULTS_POSTS
 } from '../actions/types';
 
 const init_state = {
-    posts: [],
-    recentPosts: [], 
+    recentPosts: [],
+    resultsPost: [], 
 }
 
 export default function(state = init_state, action) {
@@ -14,6 +15,12 @@ export default function(state = init_state, action) {
             return {
                 ...state, 
                 recentPosts 
+            }
+        case SET_RESULTS_POSTS:
+            const resultsPosts = action.payload;
+            return {
+                ...state,
+                resultsPosts
             }
         default:
             return state;

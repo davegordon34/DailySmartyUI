@@ -11,7 +11,6 @@ class Post extends Component {
         }   
     }
 
-
     renderTopics() {
         let topics = this.props.associated_topics.map((topic, index) => {
             return <span className="post-topic" key={index}>{topic}</span>
@@ -39,7 +38,7 @@ class Post extends Component {
             return (
                 <li className="recent-post">
                     <div className="recent-post-title">
-                        {this.props.title}
+                        <a href={this.props.url_for_post}>{this.props.title}</a>
                     </div>
 
                     <div className="recent-post-topics">
@@ -49,7 +48,8 @@ class Post extends Component {
             )
         } else if(this.props.type == 'result') {
             return (
-                <li className="result-post">
+                <li className="result-post">                      
+                
                     <div className="result-post-topics">
                         {this.renderTopics()}
                     </div>
@@ -61,6 +61,7 @@ class Post extends Component {
                         >
                             {this.props.title}
                         </a> 
+                    
                     </div>
                     <AnimateHeight
                         duration={500}

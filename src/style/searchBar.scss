@@ -26,15 +26,16 @@
                 outline: none;
                 box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.3);
             }
-        
-            p {
-                text-align: right;
-                font-size: 14px;
-                color: $color-gray-two;
-            }
-        }    
-    }   
-}
+        }
+            
+        p {
+            text-align: right;
+            font-size: 14px;
+            color: $color-gray-two;
+        }
+    }    
+}   
+
 
 .search-bar__home {
     align-content: center;
@@ -45,7 +46,7 @@
     }
 }
 
-.search-bar_results {
+.search-bar__results {
     align-content: start;
     justify-items: center;
     input {
